@@ -1,0 +1,93 @@
+{
+    "MY_F429_1": {
+        "inherits": [
+			"MCU_STM32F429xI",
+			"NUCLEO_F429ZI"
+        ],
+        "device_name": "STM32F429ZITx"
+    },
+    "MCU_STM32F405xG": {
+        "inherits": [
+            "MCU_STM32F4"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32F405xG"
+        ],
+        "macros_add": [
+            "STM32F405xx"
+        ],
+        "device_has_add": [
+            "ANALOGOUT",
+            "CAN",
+            "TRNG"
+        ]
+    },
+    "F405A": {
+        "inherits": [
+            "MCU_STM32F405xG"
+        ],
+        "components_add": [
+        ],
+        "extra_labels_add": [
+        ],
+        "detect_code": [
+            "1234"
+        ],
+        "device_has_add": [
+        ],
+        "device_has_remove": [
+        ],
+        "features": [
+        ],
+        "macros_add": [
+            "STM32F405xx"
+        ],
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL"
+        },
+        "device_name": "STM32F405VGTx"
+    },
+    "MCU_STM32F407xG": {
+        "inherits": [
+            "MCU_STM32F4"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32F407xG"
+        ],
+        "macros_add": [
+            "STM32F407xx"
+        ],
+        "device_has_add": [
+            "ANALOGOUT",
+            "CAN",
+            "TRNG"
+        ]
+    },
+    "STM32F4DISCOVERY": {
+        "inherits": [
+            "MCU_STM32F407xG"
+        ],
+        "supported_form_factors": [
+            "ARDUINO_UNO"
+        ],
+        "program_cycle_s": 2,
+        "components_add": [
+            "SD"
+        ],
+        "device_has_add": [
+        ],
+        "device_has_remove": [
+        ],
+        "device_name": "STM32F407VGTx",
+        "overrides": {
+            "clock_source": "USE_PLL_HSI",
+            "lse_available": 0,
+            "network-default-interface-type": "ETHERNET"
+        },
+        "detect_code": [
+            "1234"
+        ]
+    }
+}
